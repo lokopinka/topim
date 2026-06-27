@@ -30,12 +30,12 @@
 
     <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-200/50">
         
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full overflow-hidden bg-brand-accent/20 flex items-center justify-center font-bold text-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-3">
+            <a href="#" class="flex items-center gap-2 sm:gap-3 shrink-0">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden bg-brand-accent/20 flex items-center justify-center font-bold text-brand-dark">
                     <img src="img/logo.png" alt="Logo" onerror="this.style.display='none';">
                 </div>
-                <span class="font-black tracking-wider text-sm uppercase">ТОПИМ ЗА ТУРИЗМ</span>
+                <span class="font-black tracking-wider text-[11px] sm:text-sm uppercase leading-3 sm:leading-4">ТОПИМ ЗА<br>ТУРИЗМ</span>
             </a>
             <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-brand-dark/70">
                 <a href="#hero" class="hover:text-brand-accent transition-colors">Главная</a>
@@ -44,8 +44,9 @@
                 <a href="#media" class="hover:text-brand-accent transition-colors">Фотографии</a>
                 <a href="#reviews" class="hover:text-brand-accent transition-colors">Отзывы</a>
             </nav>
-            <a href="#contacts" class="px-5 py-2.5 bg-brand-accent text-white font-bold text-xs rounded-full uppercase tracking-wider hover:opacity-90 transition-opacity">
-                Оставить заявку
+            <a href="#contacts" class="px-3 py-2 sm:px-5 sm:py-2.5 bg-brand-accent text-white font-bold text-[10px] sm:text-xs rounded-full uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap">
+                <span>Оставить</span>
+                <span>заявку</span>
             </a>
         </div>
 
@@ -88,59 +89,34 @@
                 </div>
             </div>
 
-            <script>
-                (function() {
-                    const tickerContainer = document.getElementById('header-ticker');
-                    if (tickerContainer) {
-                        const originalBlock = tickerContainer.querySelector('.ticker-content');
-                        if (originalBlock && tickerContainer.children.length === 1) {
-                            for (let i = 0; i < 3; i++) {
-                                tickerContainer.appendChild(originalBlock.cloneNode(true));
-                            }
-                        }
-                    }
-                })();
-            </script>
-
-            <style>
-                @keyframes ticker-infinite {
-                    0% { transform: translate3d(0, 0, 0); }
-                    100% { transform: translate3d(-50%, 0, 0); }
-                }
-                .custom-ticker-track {
-                    display: flex;
-                    width: max-content;
-                    animation: ticker-infinite 40s linear infinite;
-                }
-            </style>
         </div>
     </header>
 
 
-    <main class="w-full pt-20 space-y-24 pb-12 overflow-x-hidden">
+    <main class="w-full pt-24 sm:pt-20 space-y-16 sm:space-y-24 pb-10 sm:pb-12 overflow-x-hidden">
         
         <!-- 1. HERO SECTION (Теперь с полноценным видео-фоном от самого верха) -->
-                <section id="hero" class="w-full min-h-[75vh] md:min-h-[80vh] relative flex items-center overflow-hidden z-10 m-0 p-0">
+                <section id="hero" class="w-full min-h-[75vh] md:min-h-[95vh] relative flex items-center overflow-hidden z-10 m-0 p-0">
                     
                     <!-- Цикличный видеоролик моря из облака (без звука, автозапуск) -->
                     <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
-                        <source src="img/bg-main.mp4" type="video/mp4">
+                        <source src="img/bg-main.webm" type="video/webm">
                     </video>
                     
                     <!-- Затемняющий оверлей для сочности белого текста поверх волн -->
                     <div class="absolute inset-0 bg-black/40 z-10"></div>
                     
                     <!-- Контент: смещен вниз через pt-28, чтобы не залезть под шапку -->
-                    <div class="max-w-7xl mx-auto w-full px-6 sm:px-12 flex flex-col justify-center items-center lg:items-start text-center lg:text-left relative z-20 pt-28 pb-12">
+                    <div class="max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-12 flex flex-col justify-center items-center lg:items-start text-center lg:text-left relative z-20 pt-24 sm:pt-28 pb-10 sm:pb-12">
                         <div class="max-w-2xl space-y-6 text-white">
-                            <h1 class="reveal-element text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none drop-shadow-md">
+                            <h1 class="reveal-element text-3xl sm:text-5xl lg:text-7xl font-black uppercase tracking-tight leading-none drop-shadow-md">
                                 Топим за Туризм <br>в Мурманске и Териберке!
                             </h1>
-                            <p class="reveal-element delay-1 text-base sm:text-xl font-light text-slate-100 drop-shadow-sm">
+                            <p class="reveal-element delay-1 text-sm sm:text-base md:text-xl font-light text-slate-100 drop-shadow-sm">
                                 Заполярные путешествия и чистый восторг свободы с личным гидом Яной Губановой. Идет бронь дат на лето!
                             </p>
                             <div class="reveal-element delay-2 pt-2">
-                                <a href="#contacts" class="px-8 py-4 bg-brand-accent text-white font-black rounded-full uppercase tracking-widest text-xs shadow-lg hover:scale-105 transition-transform inline-block">
+                                <a href="#contacts" class="w-full sm:w-auto max-w-[280px] px-6 py-3.5 sm:px-8 sm:py-4 bg-brand-accent text-white font-black rounded-full uppercase tracking-widest text-[11px] sm:text-xs shadow-lg hover:scale-105 transition-transform inline-block text-center">
                                     Забронировать место
                                 </a>
                             </div>
@@ -152,31 +128,31 @@
         <div class="w-full py-6 flex flex-col items-center justify-center select-none pointer-events-none">
             <div class="w-full max-w-5xl px-6 flex items-center justify-between text-slate-300">
                 
-                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div> <!-- Полоска слева -->
                 
-                <div class="mx-6 text-brand-accent/60 flex items-center gap-4 text-[10px] font-mono tracking-[0.25em] uppercase font-bold">
+                <div class="mx-6 text-brand-accent/60 flex items-center gap-4 text-[12px] font-mono tracking-[0.25em] uppercase font-bold">
                     
-                    <img src="img/whale.png" class="w-5 h-5 object-contain opacity-70" alt="Кит">
+                    <img src="img/whale.png" class="w-7 h-7 object-contain opacity-70" alt="Кит">
                     
                     <span>TOPIM ZA TURIZM</span>
                     
-                    <img src="img/wave.png" class="w-5 h-5 object-contain opacity-70" alt="Волна">
+                    <img src="img/wave.png" class="w-7 h-7 object-contain opacity-70" alt="Волна">
                     
                 </div>
                 
-                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div> <!-- Полоска справа -->
             </div>
         </div>
 
     <!-- 2. ABOUT SECTION (С фоном и полупрозрачными карточками) -->
 
-        <section class="w-full bg-[url('img/bg-about.png')] bg-cover bg-center relative py-20 lg:py-40 overflow-visible z-10">
+        <section class="w-full bg-[url('img/bg-about.png')] bg-cover bg-center relative py-14 sm:py-20 lg:py-40 overflow-visible z-10">
         
         <div class="absolute inset-0 bg-black/40 z-0"></div>
 
         <div class="reveal-element yana-trigger absolute bottom-[30%] left-0 w-full h-1 pointer-events-none z-0"></div>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col justify-between min-h-[500px]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full flex flex-col justify-between min-h-[500px]">
             
             <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
                 <h2 class="text-xs font-bold text-brand-cyan uppercase tracking-widest">Я - Яна, твой персональный гид по Заполярью, и я отвечу,</h2>
@@ -266,22 +242,6 @@
          class="yana-pop-up hidden lg:block absolute right-20 -bottom-[50px] w-[1800px] z-40 pointer-events-none select-none" 
          alt="Guide PC">
 
-    <style>
-        /* Начальное состояние: невидима и опущена на 150px вниз */
-        .yana-pop-up {
-            opacity: 0;
-            transform: translateY(150px);
-            /* Плавная настройка скорости (1.2s) и эффекта торможения в конце */
-            transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), 
-                        transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-
-        /* Конечное состояние: скрипт добавляет класс, Яна плавно появляется и встает на место */
-        .yana-pop-up.yana-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
         
     </section>
 
@@ -306,7 +266,7 @@
         </div>
 
         <!-- 3. ФОРМАТ РАБОТЫ / ИНДИВИДУАЛЬНЫЕ ТУРЫ (Замена эмодзи на PNG по макету image_9d0e1d.png) -->
-        <section id="tours" class="max-w-7xl mx-auto px-6 space-y-12 w-full block scroll-mt-24">
+        <section id="tours" class="max-w-7xl mx-auto px-4 sm:px-6 space-y-8 sm:space-y-12 w-full block scroll-mt-24">
             
             <div class="text-center w-full">
                 <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-2">Выбери свой формат</h2>
@@ -395,7 +355,7 @@
             </div>
         </div>
 
-<section id="media" class="max-w-7xl mx-auto px-6 space-y-6 w-full block scroll-mt-24">
+<section id="media" class="max-w-7xl mx-auto px-4 sm:px-6 space-y-6 w-full block scroll-mt-24">
             
         <!-- Блок заголовка Галереи (Обновлены размеры текста) -->
         <div class="text-center max-w-2xl mx-auto mb-12">
@@ -433,9 +393,9 @@
         </div>
 
         <!-- 4. ОТЗЫВЫ ИЗ ЧАТОВ (Убран верхний отступ pt-12, увеличен заголовок) -->
-        <section id="reviews" class="max-w-7xl mx-auto px-6 w-full block scroll-mt-24 relative pt-12 overflow-visible z-0">
+        <section id="reviews" class="max-w-7xl mx-auto px-4 sm:px-6 w-full block scroll-mt-24 relative pt-8 sm:pt-12 overflow-visible z-0">
             
-            <div class="text-center max-w-2xl mx-auto mb-24 md:mb-32 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-24 md:mb-40 relative z-10">
                 <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Впечатления моих гостей</h3>
                 <p class="text-sm text-brand-muted mt-2">Искренняя обратная связь от гостей нашего края:</p>
             </div>
@@ -443,15 +403,15 @@
             <div class="relative w-full overflow-visible">
                 <!-- Кит -->
                 <img src="img/whale-center.png" 
-                     class="absolute left-1/2 -translate-x-1/2 -top-28 md:-top-28 w-28 md:w-64 h-auto z-20 pointer-events-none select-none" 
+                     class="absolute left-1/2 -translate-x-1/2 -top-14 md:-top-44 w-28 md:w-64 h-auto z-20 pointer-events-none select-none" 
                      alt="Декор кит">
 
                 <img src="img/wave-left.png" 
-                     class="hidden md:block absolute left-0 bottom-0 -translate-x-[90%] translate-y-8 w-48 h-auto z-20 pointer-events-none select-none" 
+                     class="hidden md:block absolute left-0 bottom-0 -translate-x-[85%] translate-y-8 w-48 h-auto z-20 pointer-events-none select-none" 
                      alt="Декор волна левая">
 
                 <img src="img/wave-right.png" 
-                     class="absolute right-0 bottom-0 translate-x-[30%] md:translate-x-[90%] translate-y-4 md:translate-y-8 w-20 md:w-48 h-auto z-20 pointer-events-none select-none" 
+                     class="absolute right-0 bottom-0 translate-x-[30%] md:translate-x-[85%] translate-y-4 md:translate-y-8 w-20 md:w-48 h-auto z-20 pointer-events-none select-none" 
                      alt="Декор волна правая">
 
                 <!-- Кнопка Скролл Назад -->
@@ -584,7 +544,7 @@
             </div>
         </div>
 
-                <section id="contacts" class="max-w-4xl mx-auto px-4 w-full block scroll-mt-24">
+                <section id="contacts" class="max-w-4xl mx-auto px-4 sm:px-6 w-full block scroll-mt-24">
                     <div class="reveal-element relative rounded-[2.5rem] p-8 sm:p-12 shadow-xl space-y-6 w-full overflow-hidden bg-cover bg-center text-white" style="background-image: url('img/g31.png');">
                         
                         <div class="absolute inset-0 bg-slate-950/80 z-0"></div>
@@ -658,7 +618,7 @@
 
     </main>
 
-<footer class="w-full bg-slate-950 py-8 px-6 text-slate-400 text-xs mt-12">
+<footer class="w-full bg-slate-950 py-8 px-4 sm:px-6 text-slate-400 text-xs mt-12">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
                 <p>© 2026 ТОПИМ ЗА ТУРИЗМ. Все права защищены.</p>
@@ -692,7 +652,7 @@
             </button>
         </div>
     </div>
-    <! -- МОДАЛЬНОЕ ОКНО ДЛЯ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ -->
+    <!-- МОДАЛЬНОЕ ОКНО ДЛЯ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ -->
 
     <div id="privacy-modal" class="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white text-brand-dark rounded-[2rem] max-w-lg w-full p-6 sm:p-8 shadow-2xl transform scale-95 transition-transform duration-300 relative border border-slate-100 flex flex-col space-y-4">
