@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Топим за Туризм | Личный гид Яна Губанова</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#F1F5F9',     
+                            dark: '#0B132B',   
+                            accent: '#0284C7', 
+                            cyan: '#06B6D4',   
+                            muted: '#475569'   
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-brand-bg text-brand-dark antialiased m-0 p-0 w-full overflow-x-hidden">
+
+    <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-200/50">
+        
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full overflow-hidden bg-brand-accent/20 flex items-center justify-center font-bold text-brand-dark">
+                    <img src="img/logo.png" alt="Logo" onerror="this.style.display='none';">
+                </div>
+                <span class="font-black tracking-wider text-sm uppercase">ТОПИМ ЗА ТУРИЗМ</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-brand-dark/70">
+                <a href="#hero" class="hover:text-brand-accent transition-colors">Главная</a>
+                <a href="#about" class="hover:text-brand-accent transition-colors">О нас</a>
+                <a href="#tours" class="hover:text-brand-accent transition-colors">Услуги</a>
+                <a href="#media" class="hover:text-brand-accent transition-colors">Фотографии</a>
+                <a href="#reviews" class="hover:text-brand-accent transition-colors">Отзывы</a>
+            </nav>
+            <a href="#contacts" class="px-5 py-2.5 bg-brand-accent text-white font-bold text-xs rounded-full uppercase tracking-wider hover:opacity-90 transition-opacity">
+                Оставить заявку
+            </a>
+        </div>
+
+<div class="w-full bg-slate-900 text-white overflow-hidden py-3 relative select-none border-t border-white/5 block m-0 p-0">
+            <div id="header-ticker" class="custom-ticker-track">
+                <div class="ticker-content flex items-center shrink-0 text-xs md:text-sm font-bold uppercase tracking-widest">
+                    
+                    <div class="flex items-center justify-center shrink-0 w-[240px] sm:w-[300px] relative pr-6"> <span>Териберка</span>
+                        <img src="img/favicon.png" class="h-4 md:h-5 w-auto absolute right-0" alt="">
+                    </div>
+                    
+                    <div class="flex items-center justify-center shrink-0 w-[240px] sm:w-[300px] relative pr-6"> <span>Айсфлоатинг</span>
+                        <img src="img/favicon.png" class="h-4 md:h-5 w-auto absolute right-0" alt="">
+                    </div>
+                    
+                    <div class="flex items-center justify-center shrink-0 w-[240px] sm:w-[300px] relative pr-6"> <span>Северное Сияние</span>
+                        <img src="img/favicon.png" class="h-4 md:h-5 w-auto absolute right-0" alt="">
+                    </div>
+                    
+                    <div class="flex items-center justify-center shrink-0 w-[240px] sm:w-[300px] relative pr-6"> <span>Поиск Китов</span>
+                        <img src="img/favicon.png" class="h-4 md:h-5 w-auto absolute right-0" alt="">
+                    </div>
+                    
+                    <div class="flex items-center justify-center shrink-0 w-[240px] sm:w-[300px] relative pr-6"> <span>Мурманск</span>
+                        <img src="img/favicon.png" class="h-4 md:h-5 w-auto absolute right-0" alt="">
+                    </div>
+                    
+                    <div class="flex items-center justify-center shrink-0 w-[240px] sm:w-[300px] relative pr-6"> <span>Кировск</span>
+                        <img src="img/favicon.png" class="h-4 md:h-5 w-auto absolute right-0" alt="">
+                    </div>
+                    
+                    <div class="flex items-center justify-center shrink-0 w-[240px] sm:w-[300px] relative pr-6"> <span>Рыбачий</span>
+                        <img src="img/favicon.png" class="h-4 md:h-5 w-auto absolute right-0" alt="">
+                    </div>
+                    
+                    <div class="flex items-center justify-center shrink-0 w-[240px] sm:w-[300px] relative pr-6"> <span>Кольская Сверхглубокая</span>
+                        <img src="img/favicon.png" class="h-4 md:h-5 w-auto absolute right-0" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <script>
+                (function() {
+                    const tickerContainer = document.getElementById('header-ticker');
+                    if (tickerContainer) {
+                        const originalBlock = tickerContainer.querySelector('.ticker-content');
+                        if (originalBlock && tickerContainer.children.length === 1) {
+                            for (let i = 0; i < 3; i++) {
+                                tickerContainer.appendChild(originalBlock.cloneNode(true));
+                            }
+                        }
+                    }
+                })();
+            </script>
+
+            <style>
+                @keyframes ticker-infinite {
+                    0% { transform: translate3d(0, 0, 0); }
+                    100% { transform: translate3d(-50%, 0, 0); }
+                }
+                .custom-ticker-track {
+                    display: flex;
+                    width: max-content;
+                    animation: ticker-infinite 40s linear infinite;
+                }
+            </style>
+        </div>
+    </header>
+
+
+    <main class="w-full pt-20 space-y-24 pb-12 overflow-x-hidden">
+        
+        <!-- 1. HERO SECTION (Теперь с полноценным видео-фоном от самого верха) -->
+                <section id="hero" class="w-full min-h-[75vh] md:min-h-[80vh] relative flex items-center overflow-hidden z-10 m-0 p-0">
+                    
+                    <!-- Цикличный видеоролик моря из облака (без звука, автозапуск) -->
+                    <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+                        <source src="img/bg-main.mp4" type="video/mp4">
+                    </video>
+                    
+                    <!-- Затемняющий оверлей для сочности белого текста поверх волн -->
+                    <div class="absolute inset-0 bg-black/40 z-10"></div>
+                    
+                    <!-- Контент: смещен вниз через pt-28, чтобы не залезть под шапку -->
+                    <div class="max-w-7xl mx-auto w-full px-6 sm:px-12 flex flex-col justify-center items-center lg:items-start text-center lg:text-left relative z-20 pt-28 pb-12">
+                        <div class="max-w-2xl space-y-6 text-white">
+                            <h1 class="reveal-element text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-none drop-shadow-md">
+                                Топим за Туризм <br>в Мурманске и Териберке!
+                            </h1>
+                            <p class="reveal-element delay-1 text-base sm:text-xl font-light text-slate-100 drop-shadow-sm">
+                                Заполярные путешествия и чистый восторг свободы с личным гидом Яной Губановой. Идет бронь дат на лето!
+                            </p>
+                            <div class="reveal-element delay-2 pt-2">
+                                <a href="#contacts" class="px-8 py-4 bg-brand-accent text-white font-black rounded-full uppercase tracking-widest text-xs shadow-lg hover:scale-105 transition-transform inline-block">
+                                    Забронировать место
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+        <!-- РАЗДЕЛИТЕЛЬ: МИНИМАЛИСТИЧНЫЙ ВЕКТОРНЫЙ КИТ -->
+        <div class="w-full py-6 flex flex-col items-center justify-center select-none pointer-events-none">
+            <div class="w-full max-w-5xl px-6 flex items-center justify-between text-slate-300">
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+                
+                <div class="mx-6 text-brand-accent/60 flex items-center gap-4 text-[10px] font-mono tracking-[0.25em] uppercase font-bold">
+                    
+                    <img src="img/whale.png" class="w-5 h-5 object-contain opacity-70" alt="Кит">
+                    
+                    <span>TOPIM ZA TURIZM</span>
+                    
+                    <img src="img/wave.png" class="w-5 h-5 object-contain opacity-70" alt="Волна">
+                    
+                </div>
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+            </div>
+        </div>
+
+    <!-- 2. ABOUT SECTION (С фоном и полупрозрачными карточками) -->
+
+        <section class="w-full bg-[url('img/bg-about.png')] bg-cover bg-center relative py-20 lg:py-40 overflow-visible z-10">
+        
+        <div class="absolute inset-0 bg-black/40 z-0"></div>
+
+        <div class="reveal-element yana-trigger absolute bottom-[30%] left-0 w-full h-1 pointer-events-none z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 w-full flex flex-col justify-between min-h-[500px]">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+                <h2 class="text-xs font-bold text-brand-cyan uppercase tracking-widest">Я - Яна, твой персональный гид по Заполярью, и я отвечу,</h2>
+                <h3 class="text-3xl sm:text-4xl lg:text-5xl font-black uppercase text-white tracking-tight leading-none">
+                    Почему клиенты так часто <br>выбирают именно меня?
+                </h3>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end w-full">
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                    
+                    <div class="bg-white/95 p-6 rounded-3xl shadow-md text-center space-y-2 backdrop-blur-sm">
+                        <div class="w-8 h-8 mx-auto flex items-center justify-center">
+                            <img src="img/icon-guide.png" class="w-full h-full object-contain" alt="Аттестованный гид">
+                        </div>
+                        <h4 class="font-bold text-sm text-brand-dark">Аттестованный гид</h4>
+                        <p class="text-xs text-brand-muted font-normal leading-relaxed">Я могу подтвердить свою компетентность официальным дипломом по профессии гида, и смогу рассказать о Севере так, как не расскажет никто.</p>
+                    </div>
+
+                    <div class="bg-white/95 p-6 rounded-3xl shadow-md text-center space-y-2 backdrop-blur-sm">
+                        <div class="w-8 h-8 mx-auto flex items-center justify-center">
+                            <img src="img/icon-car.png" class="w-full h-full object-contain" alt="Комфортный транспорт">
+                        </div>
+                        <h4 class="font-bold text-sm text-brand-dark">Комфортный транспорт</h4>
+                        <p class="text-xs text-brand-muted font-normal leading-relaxed">Качественный японский внедорожник Mitsubishi для максимально приятной поездки.</p>
+                    </div>
+
+                    <div class="bg-white/95 p-6 rounded-3xl shadow-md text-center space-y-2 backdrop-blur-sm">
+                        <div class="w-8 h-8 mx-auto flex items-center justify-center">
+                            <img src="img/icon-problem.png" class="w-full h-full object-contain" alt="Решение проблем">
+                        </div>
+                        <h4 class="font-bold text-sm text-brand-dark">Опыт решения проблемных ситуаций</h4>
+                        <p class="text-xs text-brand-muted font-normal leading-relaxed">Любые внеплановые обстоятельства я беру на себя, ваше путешествие обязательно состоится и будет великолепным при любом раскладе.</p>
+                    </div>
+
+                    <div class="bg-white/95 p-6 rounded-3xl shadow-md text-center space-y-2 backdrop-blur-sm">
+                        <div class="w-8 h-8 mx-auto flex items-center justify-center">
+                            <img src="img/icon-atmosphere.png" class="w-full h-full object-contain" alt="Неформальная атмосфера">
+                        </div>
+                        <h4 class="font-bold text-sm text-brand-dark">Неформальная атмосфера</h4>
+                        <p class="text-xs text-brand-muted font-normal leading-relaxed">Серьезная экскурсия, семейное приключение или внезапная поездка с друзьями - я смогу подстроиться под ваш стиль, и вы отлично проведете время.</p>
+                    </div>
+
+                    <div class="bg-white/95 p-6 rounded-3xl shadow-md text-center space-y-2 backdrop-blur-sm">
+                        <div class="w-8 h-8 mx-auto flex items-center justify-center">
+                            <img src="img/icon-mountain.png" class="w-full h-full object-contain" alt="Опыт на Кольском">
+                        </div>
+                        <h4 class="font-bold text-sm text-brand-dark">Опыт на Кольском</h4>
+                        <p class="text-xs text-brand-muted font-normal leading-relaxed">Я всю жизнь живу на Кольском полуострове, знаю каждый уголок, и с радостью поделюсь с вами своими историями, опытом и знаниями.</p>
+                    </div>
+
+                    <div class="bg-white/95 p-6 rounded-3xl shadow-md text-center space-y-2 backdrop-blur-sm">
+                        <div class="w-8 h-8 mx-auto flex items-center justify-center">
+                            <img src="img/icon-groups.png" class="w-full h-full object-contain" alt="Небольшие группы">
+                        </div>
+                        <h4 class="font-bold text-sm text-brand-dark">Небольшие группы</h4>
+                        <p class="text-xs text-brand-muted font-normal leading-relaxed">Не хотите толкаться с незнакомыми людьми и вставать в 6 утра для выезда? Я смогу организовать лучшее свидание вас и любого уголка нашей природы в любое время.</p>
+                    </div>
+
+                    <div class="bg-white/95 p-6 rounded-3xl shadow-md text-center space-y-2 backdrop-blur-sm">
+                        <div class="w-8 h-8 mx-auto flex items-center justify-center">
+                            <img src="img/icon-camera.png" class="w-full h-full object-contain" alt="Помощь с фото">
+                        </div>
+                        <h4 class="font-bold text-sm text-brand-dark">Помощь с фото</h4>
+                        <p class="text-xs text-brand-muted font-normal leading-relaxed">Вы посетите много красивых мест, а я помогу пополнить вашу коллекцию в галерее эксклюзивными кадрами и эмоциями, которые запомнятся действительно надолго.</p>
+                    </div>
+
+                    <div class="bg-white/95 p-6 rounded-3xl shadow-md text-center space-y-2 backdrop-blur-sm">
+                        <div class="w-8 h-8 mx-auto flex items-center justify-center">
+                            <img src="img/icon-crab.png" class="w-full h-full object-contain" alt="Арктическая кухня">
+                        </div>
+                        <h4 class="font-bold text-sm text-brand-dark">Арктическая кухня</h4>
+                        <p class="text-xs text-brand-muted font-normal leading-relaxed">Вы сможете попробовать поистине эксклюзивные свежие блюда, добытые специально для вас из чистейших арктических вод.</p>
+                    </div>
+
+                </div>
+                
+                <div class="hidden lg:block lg:col-span-4"></div>
+            </div>
+        </div>
+
+    <img src="img/yana_about.png" 
+         class="hidden lg:hidden absolute right-0 -bottom-10 w-40 z-40 pointer-events-none select-none" 
+         alt="Guide Mobile">
+
+    <img src="img/yana_about.png" 
+         class="yana-pop-up hidden lg:block absolute right-20 -bottom-[50px] w-[1800px] z-40 pointer-events-none select-none" 
+         alt="Guide PC">
+
+    <style>
+        /* Начальное состояние: невидима и опущена на 150px вниз */
+        .yana-pop-up {
+            opacity: 0;
+            transform: translateY(150px);
+            /* Плавная настройка скорости (1.2s) и эффекта торможения в конце */
+            transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), 
+                        transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        /* Конечное состояние: скрипт добавляет класс, Яна плавно появляется и встает на место */
+        .yana-pop-up.yana-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+        
+    </section>
+
+        <!-- РАЗДЕЛИТЕЛЬ: МИНИМАЛИСТИЧНЫЙ ВЕКТОРНЫЙ КИТ -->
+        <div class="w-full py-6 flex flex-col items-center justify-center select-none pointer-events-none">
+            <div class="w-full max-w-5xl px-6 flex items-center justify-between text-slate-300">
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+                
+                <div class="mx-6 text-brand-accent/60 flex items-center gap-4 text-[10px] font-mono tracking-[0.25em] uppercase font-bold">
+                    
+                    <img src="img/whale.png" class="w-5 h-5 object-contain opacity-70" alt="Кит">
+                    
+                    <span>TOPIM ZA TURIZM</span>
+                    
+                    <img src="img/wave.png" class="w-5 h-5 object-contain opacity-70" alt="Волна">
+                    
+                </div>
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+            </div>
+        </div>
+
+        <!-- 3. ФОРМАТ РАБОТЫ / ИНДИВИДУАЛЬНЫЕ ТУРЫ (Замена эмодзи на PNG по макету image_9d0e1d.png) -->
+        <section id="tours" class="max-w-7xl mx-auto px-6 space-y-12 w-full block scroll-mt-24">
+            
+            <div class="text-center w-full">
+                <h2 class="text-xs font-bold text-brand-accent uppercase tracking-widest mb-2">Выбери свой формат</h2>
+                <h3 class="text-3xl font-black uppercase tracking-tight text-brand-dark">Абсолютная свобода в путешествиях</h3>
+            </div>
+
+            <!-- Сетка карточек -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                
+                <!-- Карточка 1: Локации -->
+                <div class="reveal-element bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col sm:flex-row gap-6 items-start transition-all hover:shadow-md">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-50 flex items-center justify-center p-3 shrink-0">
+                        <img src="img/custom-map.png" class="w-full h-full object-contain" alt="Маршруты">
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-black uppercase text-brand-dark">Любое место полуострова</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed font-medium">Места, в которых вы мечтали побывать: Териберка, Хибины, Ловозерские тундры или труднодоступные берега Баренцева моря - аккуратно довезу и расскажу о любом уголке нашей прекрасной земли.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка 2: Время -->
+                <div class="reveal-element bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col sm:flex-row gap-6 items-start transition-all hover:shadow-md">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-50 flex items-center justify-center p-3 shrink-0">
+                        <img src="img/custom-clock.png" class="w-full h-full object-contain" alt="Время">
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-black uppercase text-brand-dark">В любое удобное время</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed font-medium">Жаворонок вы, или сова - это не проблема. Выезжаем тогда, когда комфортно вам, будь то 5 утра или 14 часов дня - на Кольском полуострове есть на что посмотреть в любое время.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка 3: Группы -->
+                <div class="reveal-element bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col sm:flex-row gap-6 items-start transition-all hover:shadow-md">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center p-3 shrink-0">
+                        <img src="img/custom-users.png" class="w-full h-full object-contain" alt="Группы">
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-black uppercase text-brand-dark">Мини-группы до 4 человек</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed font-medium">Спокойный и безопасный формат путешествия на подготовленном японском внедорожнике. Только ваша компания друзей или семья - никакого присутствия посторонних людей в машине.</p>
+                    </div>
+                </div>
+
+                <!-- Карточка 4: Стоимость (Обновлено до 4 000 ₽ согласно image_9d0e1d.png) -->
+                <div class="reveal-element bg-white rounded-[2rem] p-8 shadow-sm border border-slate-100 flex flex-col sm:flex-row gap-6 items-start transition-all hover:shadow-md">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-50 flex items-center justify-center p-3 shrink-0">
+                        <img src="img/custom-price.png" class="w-full h-full object-contain" alt="Цена">
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-lg font-black uppercase text-brand-dark">Честная цена от 4 000 ₽</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed font-medium">Базовая стоимость выезда начинается от 4 000 рублей с человека, прозрачна и фиксируется до старта. Для подробного расчета оставьте заявку, и я расскажу все детали.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Информационный блок-призыв -->
+            <div class="reveal-element bg-slate-900 text-white rounded-[2rem] p-8 flex flex-col sm:flex-row items-center justify-between gap-6 w-full">
+                <div class="space-y-1 text-center sm:text-left">
+                    <h4 class="text-base font-black uppercase">Хотите собрать уникальный маршрут?</h4>
+                    <p class="text-[11px] text-slate-400 font-medium">Напишите ваши пожелания, и мы рассчитаем стоимость экспедиции под ключ.</p>
+                </div>
+                <a href="#contacts" class="px-6 py-3.5 bg-brand-accent text-white font-bold text-xs rounded-full uppercase tracking-widest hover:opacity-90 transition-opacity shrink-0">
+                    Оставить заявку
+                </a>
+            </div>
+
+        </section>
+
+        <!-- РАЗДЕЛИТЕЛЬ: МИНИМАЛИСТИЧНЫЙ ВЕКТОРНЫЙ КИТ -->
+        <div class="w-full py-6 flex flex-col items-center justify-center select-none pointer-events-none">
+            <div class="w-full max-w-5xl px-6 flex items-center justify-between text-slate-300">
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+                
+                <div class="mx-6 text-brand-accent/60 flex items-center gap-4 text-[10px] font-mono tracking-[0.25em] uppercase font-bold">
+                    
+                    <img src="img/whale.png" class="w-5 h-5 object-contain opacity-70" alt="Кит">
+                    
+                    <span>TOPIM ZA TURIZM</span>
+                    
+                    <img src="img/wave.png" class="w-5 h-5 object-contain opacity-70" alt="Волна">
+                    
+                </div>
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+            </div>
+        </div>
+
+<section id="media" class="max-w-7xl mx-auto px-6 space-y-6 w-full block scroll-mt-24">
+            
+        <!-- Блок заголовка Галереи (Обновлены размеры текста) -->
+        <div class="text-center max-w-2xl mx-auto mb-12">
+            <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Галерея путешествий</h3>
+            <p class="text-sm text-brand-muted mt-2">Живые снимки из наших экспедиций на Кольский полуостров</p>
+        </div>
+            
+            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full"></div>
+
+            <div class="text-center pt-4">
+                <button id="load-more-photos" class="px-6 py-3 bg-brand-accent text-white font-bold text-xs rounded-full uppercase tracking-widest hover:bg-brand-accent/90 transition-all shadow-md">
+                    Больше фото
+                </button>
+            </div>
+        </section>
+
+        <!-- РАЗДЕЛИТЕЛЬ: МИНИМАЛИСТИЧНЫЙ ВЕКТОРНЫЙ КИТ -->
+        <div class="w-full py-6 flex flex-col items-center justify-center select-none pointer-events-none">
+            <div class="w-full max-w-5xl px-6 flex items-center justify-between text-slate-300">
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+                
+                <div class="mx-6 text-brand-accent/60 flex items-center gap-4 text-[10px] font-mono tracking-[0.25em] uppercase font-bold">
+                    
+                    <img src="img/whale.png" class="w-5 h-5 object-contain opacity-70" alt="Кит">
+                    
+                    <span>TOPIM ZA TURIZM</span>
+                    
+                    <img src="img/wave.png" class="w-5 h-5 object-contain opacity-70" alt="Волна">
+                    
+                </div>
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+            </div>
+        </div>
+
+        <!-- 4. ОТЗЫВЫ ИЗ ЧАТОВ (Убран верхний отступ pt-12, увеличен заголовок) -->
+        <section id="reviews" class="max-w-7xl mx-auto px-6 w-full block scroll-mt-24 relative pt-12 overflow-visible z-0">
+            
+            <div class="text-center max-w-2xl mx-auto mb-24 md:mb-32 relative z-10">
+                <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Впечатления моих гостей</h3>
+                <p class="text-sm text-brand-muted mt-2">Искренняя обратная связь от гостей нашего края:</p>
+            </div>
+            
+            <div class="relative w-full overflow-visible">
+                <!-- Кит -->
+                <img src="img/whale-center.png" 
+                     class="absolute left-1/2 -translate-x-1/2 -top-28 md:-top-28 w-28 md:w-64 h-auto z-20 pointer-events-none select-none" 
+                     alt="Декор кит">
+
+                <img src="img/wave-left.png" 
+                     class="hidden md:block absolute left-0 bottom-0 -translate-x-[90%] translate-y-8 w-48 h-auto z-20 pointer-events-none select-none" 
+                     alt="Декор волна левая">
+
+                <img src="img/wave-right.png" 
+                     class="absolute right-0 bottom-0 translate-x-[30%] md:translate-x-[90%] translate-y-4 md:translate-y-8 w-20 md:w-48 h-auto z-20 pointer-events-none select-none" 
+                     alt="Декор волна правая">
+
+                <!-- Кнопка Скролл Назад -->
+                <button id="review-prev" class="absolute -left-5 top-1/2 -translate-y-1/2 z-30 w-10 h-10 bg-white border border-slate-100 rounded-full flex items-center justify-center shadow-md text-brand-dark hover:text-brand-accent hover:scale-105 transition-all hidden md:flex focus:outline-none">
+                    <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6"></path>
+                    </svg>
+                </button>
+
+                <!-- Горизонтальная лента трека -->
+                <div id="reviews-track" class="flex overflow-x-auto snap-x snap-mandatory gap-6 w-full scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden relative z-10">
+                    
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review17.png" class="w-full h-auto object-contain block" alt="Отзыв 17">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review22.png" class="w-full h-auto object-contain block" alt="Отзыв 22">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review20.png" class="w-full h-auto object-contain block" alt="Отзыв 20">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review11.png" class="w-full h-auto object-contain block" alt="Отзыв 11">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review6.png" class="w-full h-auto object-contain block" alt="Отзыв 6">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review4.png" class="w-full h-auto object-contain block" alt="Отзыв 4">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review1.png" class="w-full h-auto object-contain block" alt="Отзыв 1">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review2.png" class="w-full h-auto object-contain block" alt="Отзыв 2">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review3.png" class="w-full h-auto object-contain block" alt="Отзыв 3">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review5.png" class="w-full h-auto object-contain block" alt="Отзыв 5">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review7.png" class="w-full h-auto object-contain block" alt="Отзыв 7">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review8.png" class="w-full h-auto object-contain block" alt="Отзыв 8">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review9.png" class="w-full h-auto object-contain block" alt="Отзыв 9">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review10.png" class="w-full h-auto object-contain block" alt="Отзыв 10">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review12.png" class="w-full h-auto object-contain block" alt="Отзыв 12">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review13.png" class="w-full h-auto object-contain block" alt="Отзыв 13">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review14.png" class="w-full h-auto object-contain block" alt="Отзыв 14">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review15.png" class="w-full h-auto object-contain block" alt="Отзыв 15">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review16.png" class="w-full h-auto object-contain block" alt="Отзыв 16">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review18.png" class="w-full h-auto object-contain block" alt="Отзыв 18">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review19.png" class="w-full h-auto object-contain block" alt="Отзыв 19">
+                    </div>
+
+                    <div class="snap-start shrink-0 w-[85%] sm:w-[calc((100%-24px)/2)] lg:w-[calc((100%-48px)/3)] rounded-3xl overflow-hidden shadow-sm bg-white border border-slate-100/60 hover:scale-[1.01] transition-transform duration-300">
+                        <img src="img/review21.png" class="w-full h-auto object-contain block" alt="Отзыв 21">
+                    </div>
+
+                </div>
+
+                <!-- Кнопка Скролл Вперед -->
+                <button id="review-next" class="absolute -right-5 top-1/2 -translate-y-1/2 z-30 w-10 h-10 bg-white border border-slate-100 rounded-full flex items-center justify-center shadow-md text-brand-dark hover:text-brand-accent hover:scale-105 transition-all hidden md:flex focus:outline-none">
+                    <svg class="w-6 h-6 text-brand-dark" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6"></path>
+                    </svg>
+                </button>
+
+            </div>
+        </section>
+
+        <!-- РАЗДЕЛИТЕЛЬ: МИНИМАЛИСТИЧНЫЙ ВЕКТОРНЫЙ КИТ -->
+        <div class="w-full py-6 flex flex-col items-center justify-center select-none pointer-events-none">
+            <div class="w-full max-w-5xl px-6 flex items-center justify-between text-slate-300">
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+                
+                <div class="mx-6 text-brand-accent/60 flex items-center gap-4 text-[10px] font-mono tracking-[0.25em] uppercase font-bold">
+                    
+                    <img src="img/whale.png" class="w-5 h-5 object-contain opacity-70" alt="Кит">
+                    
+                    <span>TOPIM ZA TURIZM</span>
+                    
+                    <img src="img/wave.png" class="w-5 h-5 object-contain opacity-70" alt="Волна">
+                    
+                </div>
+                
+                <div class="h-[1px] bg-slate-300/70 flex-grow"></div>
+            </div>
+        </div>
+
+                <section id="contacts" class="max-w-4xl mx-auto px-4 w-full block scroll-mt-24">
+                    <div class="reveal-element relative rounded-[2.5rem] p-8 sm:p-12 shadow-xl space-y-6 w-full overflow-hidden bg-cover bg-center text-white" style="background-image: url('img/g31.png');">
+                        
+                        <div class="absolute inset-0 bg-slate-950/80 z-0"></div>
+
+                        <div class="relative z-10 text-center space-y-2 w-full">
+                            <h3 class="text-2xl sm:text-3xl font-black uppercase tracking-tight">Остались вопросы?</h3>
+                            <p class="text-xs sm:text-sm text-slate-400">Среднее время обработки заявки - 15-20 минут, в редких случаях до 1 дня.</p>
+                        </div>
+
+                        <form id="tg-form" class="relative z-10 space-y-5 w-full">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                                <div class="space-y-1">
+                                    <label class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Имя</label>
+                                    <input type="text" name="name" required placeholder="Александр" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-brand-accent transition-colors text-sm text-white">
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-[10px] font-bold uppercase text-slate-400 tracking-wider">Телефон</label>
+                                    <input type="tel" name="phone" required placeholder="+7 (999) 000-00-00" class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl focus:outline-none focus:border-brand-accent transition-colors text-sm text-white">
+                                </div>
+                            </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase text-slate-400 tracking-wider block">Где с вами можно связаться?</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full">
+                            
+                            <label class="cursor-pointer">
+                                <input type="radio" name="contact_method" value="Telegram" checked class="peer hidden">
+                                <div class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-wider transition-all peer-checked:bg-brand-accent peer-checked:border-brand-accent hover:bg-white/10">
+                                    <img src="img/telegram.png" class="w-4 h-4 object-contain" alt="Telegram">
+                                    Telegram
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="contact_method" value="WhatsApp" class="peer hidden">
+                                <div class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-wider transition-all peer-checked:bg-emerald-600 peer-checked:border-emerald-600 hover:bg-white/10">
+                                    <img src="img/whatsapp.png" class="w-4 h-4 object-contain" alt="WhatsApp">
+                                    WhatsApp
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="contact_method" value="VK" class="peer hidden">
+                                <div class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-wider transition-all peer-checked:bg-blue-600 peer-checked:border-blue-600 hover:bg-white/10">
+                                    <img src="img/vk.png" class="w-4 h-4 object-contain" alt="ВКонтакте">
+                                    ВКонтакте
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="contact_method" value="Max" class="peer hidden">
+                                <div class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-wider transition-all peer-checked:bg-cyan-600 peer-checked:border-cyan-600 hover:bg-white/10">
+                                    <img src="img/max.png" class="w-4 h-4 object-contain" alt="Макс">
+                                    Макс
+                                </div>
+                            </label>
+
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 pt-1 select-none">
+                        <input type="checkbox" id="privacy-checkbox" required class="mt-0.5 w-4 h-4 accent-brand-accent cursor-pointer rounded">
+                        <label for="privacy-checkbox" class="text-[11px] text-slate-400 leading-tight cursor-pointer">
+                            Я даю свое согласие на обработку <span data-privacy-open class="text-white underline hover:text-brand-cyan transition-colors font-bold cursor-pointer">персональных данных в соответствии с политикой конфиденциальности</span>
+                        </label>
+                    </div>  
+                            <button type="submit" class="w-full py-4 bg-brand-accent text-white font-black rounded-xl uppercase tracking-widest text-xs shadow-lg hover:opacity-90 transition-opacity">
+                                Оставить заявку
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+    </main>
+
+<footer class="w-full bg-slate-950 py-8 px-6 text-slate-400 text-xs mt-12">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 text-center sm:text-left">
+                <p>© 2026 ТОПИМ ЗА ТУРИЗМ. Все права защищены.</p>
+                <span data-privacy-open class="text-slate-500 underline hover:text-brand-cyan transition-colors cursor-pointer font-medium">Политика конфиденциальности</span>
+            </div>
+            <p class="tracking-widest text-[10px] font-bold text-brand-accent uppercase">Redesign by LOKDESIGN</p>
+        </div>
+    </footer>
+        <script src="app.js"></script>
+
+    <button id="scroll-to-top" class="fixed bottom-6 right-6 z-50 w-11 h-11 bg-brand-accent text-white rounded-full flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-300 hover:bg-brand-accent/90 focus:outline-none">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5"></path>
+        </svg>
+    </button>
+
+    <div id="custom-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white text-brand-dark rounded-[2rem] max-w-md w-full p-8 shadow-2xl transform scale-95 transition-transform duration-300 relative border border-slate-100 flex flex-col items-center text-center space-y-4">
+            
+            <div id="modal-icon-bg" class="w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-sm transition-colors duration-300">
+                <span id="modal-icon-text"></span>
+            </div>
+            
+            <div class="space-y-2">
+                <h4 id="modal-title" class="text-xl font-black uppercase tracking-tight text-brand-dark">Заголовок</h4>
+                <p id="modal-message" class="text-xs text-brand-muted leading-relaxed font-medium">Сообщение</p>
+            </div>
+            
+            <button id="modal-close-btn" class="w-full py-3.5 bg-brand-dark text-white font-black rounded-xl uppercase tracking-widest text-[10px] shadow-md hover:opacity-90 transition-opacity mt-2 focus:outline-none">
+                Вернуться
+            </button>
+        </div>
+    </div>
+    <! -- МОДАЛЬНОЕ ОКНО ДЛЯ ПОЛИТИКИ КОНФИДЕНЦИАЛЬНОСТИ -->
+
+    <div id="privacy-modal" class="fixed inset-0 z-[110] flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white text-brand-dark rounded-[2rem] max-w-lg w-full p-6 sm:p-8 shadow-2xl transform scale-95 transition-transform duration-300 relative border border-slate-100 flex flex-col space-y-4">
+            
+            <h4 class="text-lg font-black uppercase tracking-tight text-brand-dark border-b border-slate-100 pb-2">Политика конфиденциальности и обработки персональных данных</h4>
+            
+            <div class="text-[11px] text-brand-muted leading-relaxed overflow-y-auto max-h-[45vh] pr-2 space-y-3 font-medium">
+                <p>Политика в отношении обработки персональных данных
+                <p><strong>1. Общие положения</strong>
+                <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. № 152-ФЗ «О персональных данных» (далее — Закон о персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые Шульгиной Яной Валерьевной (далее — Оператор).
+                <p>1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.
+                <p>1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее — Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта https://topimzaturizm.ru.
+                <p><strong>2. Основные понятия, используемые в Политике</strong>
+                <p>2.1. Автоматизированная обработка персональных данных — обработка персональных данных с помощью средств вычислительной техники.
+                <p>2.2. Блокирование персональных данных — временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных).
+                <p>2.3. Веб-сайт — совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу https://topimzaturizm.ru.
+                <p>2.4. Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных и обеспечивающих их обработку информационных технологий и технических средств.
+                <p>2.5. Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных.
+                <p>2.6. Обработка персональных данных — любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.
+                <p>2.7. Оператор — государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и/или осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.
+                <p>2.8. Персональные данные — любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта https://topimzaturizm.ru.
+                <p>2.9. Персональные данные, разрешенные субъектом персональных данных для распространения, — персональные данные, доступ неограниченного круга лиц к которым предоставлен субъектом персональных данных путем дачи согласия на обработку персональных данных, разрешенных субъектом персональных данных для распространения в порядке, предусмотренном Законом о персональных данных (далее — персональные данные, разрешенные для распространения).
+                <p>2.10. Пользователь — любой посетитель веб-сайта https://topimzaturizm.ru.
+                <p>2.11. Предоставление персональных данных — действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц.
+                <p>2.12. Распространение персональных данных — любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом.
+                <p>2.13. Трансграничная передача персональных данных — передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу.
+                <p>2.14. Уничтожение персональных данных — любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и/или уничтожаются материальные носители персональных данных.
+                <p><strong>3. Основные права и обязанности Оператора </strong>
+                <p>3.1. Оператор имеет право:
+                <p>— получать от субъекта персональных данных достоверные информацию и/или документы, содержащие персональные данные;
+                <p>— в случае отзыва субъектом персональных данных согласия на обработку персональных данных, а также, направления обращения с требованием о прекращении обработки персональных данных, Оператор вправе продолжить обработку персональных данных без согласия субъекта персональных данных при наличии оснований, указанных в Законе о персональных данных;
+                <p>— самостоятельно определять состав и перечень мер, необходимых и достаточных для обеспечения выполнения обязанностей, предусмотренных Законом о персональных данных и принятыми в соответствии с ним нормативными правовыми актами, если иное не предусмотрено Законом о персональных данных или другими федеральными законами.
+                <p>3.2. Оператор обязан:
+                <p>— предоставлять субъекту персональных данных по его просьбе информацию, касающуюся обработки его персональных данных;
+                <p>— организовывать обработку персональных данных в порядке, установленном действующим законодательством РФ;
+                <p>— отвечать на обращения и запросы субъектов персональных данных и их законных представителей в соответствии с требованиями Закона о персональных данных;
+                <p>— сообщать в уполномоченный орган по защите прав субъектов персональных данных по запросу этого органа необходимую информацию в течение 10 дней с даты получения такого запроса;
+                <p>— публиковать или иным образом обеспечивать неограниченный доступ к настоящей Политике в отношении обработки персональных данных;
+                <p>— принимать правовые, организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, предоставления, распространения персональных данных, а также от иных неправомерных действий в отношении персональных данных;
+                <p>— прекратить передачу (распространение, предоставление, доступ) персональных данных, прекратить обработку и уничтожить персональные данные в порядке и случаях, предусмотренных Законом о персональных данных;
+                <p>— исполнять иные обязанности, предусмотренные Законом о персональных данных.
+                <p><strong>4. Основные права и обязанности субъектов персональных данных</strong>
+                <p>4.1. Субъекты персональных данных имеют право: </p>
+                <p>— получать информацию, касающуюся обработки его персональных данных, за исключением случаев, предусмотренных федеральными законами. Сведения предоставляются субъекту персональных данных Оператором в доступной форме, и в них не должны содержаться персональные данные, относящиеся к другим субъектам персональных данных, за исключением случаев, когда имеются законные основания для раскрытия таких персональных данных. Перечень информации и порядок ее получения установлен Законом о персональных данных;</p>
+                <p>— требовать от оператора уточнения его персональных данных, их блокирования или уничтожения в случае, если персональные данные являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для заявленной цели обработки, а также принимать предусмотренные законом меры по защите своих прав;</p>
+                <p>— выдвигать условие предварительного согласия при обработке персональных данных в целях продвижения на рынке товаров, работ и услуг;</p>
+                <p>— на отзыв согласия на обработку персональных данных, а также, на направление требования о прекращении обработки персональных данных;</p>
+                <p>— обжаловать в уполномоченный орган по защите прав субъектов персональных данных или в судебном порядке неправомерные действия или бездействие Оператора при обработке его персональных данных;</p>
+                <p>— на осуществление иных прав, предусмотренных законодательством РФ.
+                <p>4.2. Субъекты персональных данных обязаны:</p>
+                <p>— предоставлять Оператору достоверные данные о себе;</p>
+                <p>— сообщать Оператору об уточнении (обновлении, изменении) своих персональных данных.</p>
+                <p>4.3. Лица, передавшие Оператору недостоверные сведения о себе, либо сведения о другом субъекте персональных данных без согласия последнего, несут ответственность в соответствии с законодательством РФ.</p>
+                <p><strong>5. Принципы обработки персональных данных</strong>
+                <p>5.1. Обработка персональных данных осуществляется на законной и справедливой основе.</p>
+                <p>5.2. Обработка персональных данных ограничивается достижением конкретных, заранее определенных и законных целей. Не допускается обработка персональных данных, несовместимая с целями сбора персональных данных.</p>
+                <p>5.3. Не допускается объединение баз данных, содержащих персональные данные, обработка которых осуществляется в целях, несовместимых между собой.</p>
+                <p>5.4. Обработке подлежат только персональные данные, которые отвечают целям их обработки.</p>
+                <p>5.5. Содержание и объем обрабатываемых персональных данных соответствуют заявленным целям обработки. Не допускается избыточность обрабатываемых персональных данных по отношению к заявленным целям их обработки.</p>
+                <p>5.6. При обработке персональных данных обеспечивается точность персональных данных, их достаточность, а в необходимых случаях и актуальность по отношению к целям обработки персональных данных. Оператор принимает необходимые меры и/или обеспечивает их принятие по удалению или уточнению неполных или неточных данных.</p>
+                <p>5.7. Хранение персональных данных осуществляется в форме, позволяющей определить субъекта персональных данных, не дольше, чем этого требуют цели обработки персональных данных, если срок хранения персональных данных не установлен федеральным законом, договором, стороной которого, выгодоприобретателем или поручителем по которому является субъект персональных данных. Обрабатываемые персональные данные уничтожаются либо обезличиваются по достижении целей обработки или в случае утраты необходимости в достижении этих целей, если иное не предусмотрено федеральным законом.</p>
+                <p><strong>6. Цели обработки персональных данных</p></strong>
+                <p>Цель обработки: уточнение деталей заказа</p>
+
+                <p>Персональные данные: имя, номер телефона</p>
+
+                <p>Правовые основания:</p>
+
+                <p>Федеральный закон «Об информации, информационных технологиях и о защите информации» от 27.07.2006 N 149-ФЗ</p>
+
+                <p>Виды обработки персональных данных:</p>
+
+                <p>Сбор, запись, систематизация, накопление, хранение, уничтожение и обезличивание персональных данных</p>
+
+                <p><strong>7. Условия обработки персональных данных</strong></p>
+                <p>7.1. Обработка персональных данных осуществляется с согласия субъекта персональных данных на обработку его персональных данных.
+                <p>7.2. Обработка персональных данных необходима для достижения целей, предусмотренных международным договором Российской Федерации или законом, для осуществления возложенных законодательством Российской Федерации на оператора функций, полномочий и обязанностей.</p>
+                <p>7.3. Обработка персональных данных необходима для осуществления правосудия, исполнения судебного акта, акта другого органа или должностного лица, подлежащих исполнению в соответствии с законодательством Российской Федерации об исполнительном производстве.</p>
+                <p>7.4. Обработка персональных данных необходима для исполнения договора, стороной которого либо выгодоприобретателем или поручителем по которому является субъект персональных данных, а также для заключения договора по инициативе субъекта персональных данных или договора, по которому субъект персональных данных будет являться выгодоприобретателем или поручителем.</p>
+                <p>7.5. Обработка персональных данных необходима для осуществления прав и законных интересов оператора или третьих лиц либо для достижения общественно значимых целей при условии, что при этом не нарушаются права и свободы субъекта персональных данных.</p>
+                <p>7.6. Осуществляется обработка персональных данных, доступ неограниченного круга лиц к которым предоставлен субъектом персональных данных либо по его просьбе (далее — общедоступные персональные данные).</p>
+                <p>7.7. Осуществляется обработка персональных данных, подлежащих опубликованию или обязательному раскрытию в соответствии с федеральным законом.</p></p>
+                <p><strong>8. Порядок сбора, хранения, передачи и других видов обработки персональных данных</strong></p>
+                <p>Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.</p>
+                <p>8.1. Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.</p>
+                <p>8.2. Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства либо в случае, если субъектом персональных данных дано согласие Оператору на передачу данных третьему лицу для исполнения обязательств по гражданско-правовому договору.</p>
+                <p>8.3. В случае выявления неточностей в персональных данных, Пользователь может актуализировать их самостоятельно, путем направления Оператору уведомление на адрес электронной почты Оператора yana_gubanova@list.ru с пометкой «Актуализация персональных данных».</p>
+                <p>8.4. Срок обработки персональных данных определяется достижением целей, для которых были собраны персональные данные, если иной срок не предусмотрен договором или действующим законодательством.</p>
+                <p>Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление посредством электронной почты на электронный адрес Оператора yana_gubanova@list.ru с пометкой «Отзыв согласия на обработку персональных данных».</p>
+                <p>8.5. Вся информация, которая собирается сторонними сервисами, в том числе платежными системами, средствами связи и другими поставщиками услуг, хранится и обрабатывается указанными лицами (Операторами) в соответствии с их Пользовательским соглашением и Политикой конфиденциальности. Субъект персональных данных и/или с указанными документами. Оператор не несет ответственность за действия третьих лиц, в том числе указанных в настоящем пункте поставщиков услуг.</p>
+                <p>8.6. Установленные субъектом персональных данных запреты на передачу (кроме предоставления доступа), а также на обработку или условия обработки (кроме получения доступа) персональных данных, разрешенных для распространения, не действуют в случаях обработки персональных данных в государственных, общественных и иных публичных интересах, определенных законодательством РФ.</p>
+                <p>8.7. Оператор при обработке персональных данных обеспечивает конфиденциальность персональных данных.</p>
+                <p>8.8. Оператор осуществляет хранение персональных данных в форме, позволяющей определить субъекта персональных данных, не дольше, чем этого требуют цели обработки персональных данных, если срок хранения персональных данных не установлен федеральным законом, договором, стороной которого, выгодоприобретателем или поручителем по которому является субъект персональных данных.</p>
+                <p>8.9. Условием прекращения обработки персональных данных может являться достижение целей обработки персональных данных, истечение срока действия согласия субъекта персональных данных, отзыв согласия субъектом персональных данных или требование о прекращении обработки персональных данных, а также выявление неправомерной обработки персональных данных.</p>
+                <p><strong>9. Перечень действий, производимых Оператором с полученными персональными данными</strong></p>
+                <p>9.1. Оператор осуществляет сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление и уничтожение персональных данных.</p>
+                <p>9.2. Оператор осуществляет автоматизированную обработку персональных данных с получением и/или передачей полученной информации по информационно-телекоммуникационным сетям или без таковой.</p>
+                <p><strong>10. Трансграничная передача персональных данных</strong></p>
+                <p>10.1. Оператор до начала осуществления деятельности по трансграничной передаче персональных данных обязан уведомить уполномоченный орган по защите прав субъектов персональных данных о своем намерении осуществлять трансграничную передачу персональных данных (такое уведомление направляется отдельно от уведомления о намерении осуществлять обработку персональных данных).</p>
+                <p>10.2. Оператор до подачи вышеуказанного уведомления, обязан получить от органов власти иностранного государства, иностранных физических лиц, иностранных юридических лиц, которым планируется трансграничная передача персональных данных, соответствующие сведения.</p>
+                <p><strong>11. Конфиденциальность персональных данных</strong></p>
+                <p>Оператор и иные лица, получившие доступ к персональным данным, обязаны не раскрывать третьим лицам и не распространять персональные данные без согласия субъекта персональных данных, если иное не предусмотрено федеральным законом.</p>
+                <p><strong>12. Заключительные положения</strong></p>
+                <p>12.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты yana_gubanova@list.ru.</p>
+                <p>12.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.</p>
+            </div>
+            
+            <button id="privacy-close-btn" class="w-full py-3.5 bg-brand-dark text-white font-black rounded-xl uppercase tracking-widest text-[10px] shadow-md hover:opacity-90 transition-opacity focus:outline-none">
+                Закрыть
+            </button>
+        </div>
+    </div>
+</body>
+</html>
