@@ -50,7 +50,7 @@
             </a>
         </div>
 
-<div class="w-full bg-slate-900 text-white overflow-hidden py-3 relative select-none border-t border-white/5 block m-0 p-0">
+        <div class="w-full bg-slate-900 text-white overflow-hidden py-3 relative select-none border-t border-white/5 block m-0 p-0">
             <div id="header-ticker" class="custom-ticker-track">
                 <div class="ticker-content flex items-center shrink-0 text-xs md:text-sm font-bold uppercase tracking-widest">
                     
@@ -89,6 +89,31 @@
                 </div>
             </div>
 
+            <script>
+                window.addEventListener('load', function() {
+                    const tickerContainer = document.getElementById('header-ticker');
+                    if (tickerContainer) {
+                        const originalBlock = tickerContainer.querySelector('.ticker-content');
+                        if (originalBlock && tickerContainer.children.length === 1) {
+                            for (let i = 0; i < 3; i++) {
+                                tickerContainer.appendChild(originalBlock.cloneNode(true));
+                            }
+                        }
+                    }
+                });
+            </script>
+
+            <style>
+                @keyframes ticker-infinite {
+                    0% { transform: translate3d(0, 0, 0); }
+                    100% { transform: translate3d(-50%, 0, 0); }
+                }
+                .custom-ticker-track {
+                    display: flex;
+                    width: max-content;
+                    animation: ticker-infinite 40s linear infinite;
+                }
+            </style>
         </div>
     </header>
 
